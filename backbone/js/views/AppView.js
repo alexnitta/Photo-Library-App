@@ -11,8 +11,6 @@ var AppView = Backbone.View.extend({
     this.display = new DisplayView({
       collection: this.collection
     });
-    this.title = new TitleView();
-    this.rating = new RatingView();    
   
     this.render();
   },
@@ -22,8 +20,6 @@ var AppView = Backbone.View.extend({
       this.header.$el,
       this.list.$el,
       this.display.$el,
-      this.title.$el,
-      this.rating.$el
     ]);
     return this;
   }
