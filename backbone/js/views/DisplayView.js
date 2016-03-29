@@ -8,6 +8,8 @@ var DisplayView = Backbone.View.extend({
     this.collection.each(function(entry) {
       if (entry.attributes.displayPhoto === true) { 
         this.$el.html(this.displayTemplate(entry.attributes));
+        this.input = new InputView({model: entry});
+        this.$el.append(this.input.$el);
       }
     }, this);
     return this;

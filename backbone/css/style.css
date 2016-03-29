@@ -76,11 +76,10 @@ h1 {
   padding-bottom: 36px;
 }
 
-input {
-  text-align: center;
-  line-height: 55px;
+.input {
+  line-height: 20px;
   font-family: 'Garamond', 'Palatino', 'Didot', serif;
-  font-size: 32pt;
+  font-size: 12pt;
 }
 
 .list {

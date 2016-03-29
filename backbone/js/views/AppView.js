@@ -8,10 +8,15 @@ var AppView = Backbone.View.extend({
     });
     
     this.header = new HeaderView();
+    
     this.display = new DisplayView({
       collection: this.collection
     });
   
+    // this.input = new InputView({
+    //   collection: this.collection
+    // });
+    
     this.render();
   },
   
@@ -20,6 +25,7 @@ var AppView = Backbone.View.extend({
       this.header.$el,
       this.list.$el,
       this.display.$el,
+      // this.input.$el
     ]);
     return this;
   }

@@ -11,9 +11,9 @@ var EntryView = Backbone.View.extend({
     
   },
   
-  addDisplay: function() {
-    this.$el.append('<tr>AddDisplay</tr>');
-  },
+  // addDisplay: function() {
+  //   this.$el.append('<tr>AddDisplay</tr>');
+  // },
   
   initialize: function() {
     this.render();
@@ -23,7 +23,6 @@ var EntryView = Backbone.View.extend({
   
   events: {
     'click': function() {
-      console.log('click event');
       this.model.handleClick();
     }
   },

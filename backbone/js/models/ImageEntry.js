@@ -17,6 +17,11 @@ var ImageEntry = Backbone.Model.extend({
     this.trigger('toggle:display');
   },
   
+  handleSubmit: function(input) {
+    this.set({rating: input});
+    this.trigger('toggle:input');
+  },
+  
   initialize: function() {}
 
 });
