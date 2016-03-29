@@ -11,14 +11,8 @@ var EntryView = Backbone.View.extend({
     
   },
   
-  // addDisplay: function() {
-  //   this.$el.append('<tr>AddDisplay</tr>');
-  // },
-  
   initialize: function() {
     this.render();
-    this.model.on('toggle:display', this.render, this);
-    
   },
   
   events: {

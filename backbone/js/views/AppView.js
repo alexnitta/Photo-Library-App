@@ -12,10 +12,6 @@ var AppView = Backbone.View.extend({
     this.display = new DisplayView({
       collection: this.collection
     });
-  
-    // this.input = new InputView({
-    //   collection: this.collection
-    // });
     
     this.render();
   },

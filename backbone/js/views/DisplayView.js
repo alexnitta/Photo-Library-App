@@ -18,6 +18,7 @@ var DisplayView = Backbone.View.extend({
   initialize: function() {
     this.render();
     this.collection.on('toggle:display', this.render, this);
+    this.collection.on('toggle:input', this.render, this);
     
   }
   
