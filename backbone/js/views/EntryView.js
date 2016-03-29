@@ -5,20 +5,19 @@ var EntryView = Backbone.View.extend({
   
   entryTemplate: _.template('<td class="entry"><%=title%></td>'),
   
-  render: function() {
-    this.$el.html(this.entryTemplate(this.model.attributes));
-    return this;
-    
+  events: {
+    'click': function() {
+      this.model.handleClick();
+    }
   },
   
   initialize: function() {
     this.render();
   },
   
-  events: {
-    'click': function() {
-      this.model.handleClick();
-    }
-  },
+  render: function() {
+    this.$el.html(this.entryTemplate(this.model.attributes));
+    return this;
+  }  
   
 });

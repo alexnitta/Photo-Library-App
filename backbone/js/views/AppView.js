@@ -3,18 +3,21 @@ var AppView = Backbone.View.extend({
   el: '#app',
   
   initialize: function() {
+    
+    var currentCollection = new ImageCollection(imageData, {model: ImageEntry});
+    
     this.list = new ListView({
-      collection: this.collection
+      collection: currentCollection
     });
     
     this.header = new HeaderView();
     
     this.save = new SaveView({
-      collection: this.collection
+      collection: currentCollection
     });
     
     this.display = new DisplayView({
-      collection: this.collection
+      collection: currentCollection
     });
     
     this.render();
@@ -26,7 +29,6 @@ var AppView = Backbone.View.extend({
       this.save.$el,
       this.list.$el,
       this.display.$el,
-      // this.input.$el
     ]);
     return this;
   }

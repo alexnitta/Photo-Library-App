@@ -21,6 +21,7 @@ var imageData = [
   }
 ];
 
-var app = new AppView({
-  collection: new ImageCollection(imageData, {model: ImageEntry})
-});
+var app = new AppView();
+
+
+// test image url: http://www.floridasportsman.com/files/2013/05/LARGEMOUTH-BASS.30.jpg

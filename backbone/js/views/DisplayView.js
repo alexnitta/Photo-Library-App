@@ -4,6 +4,12 @@ var DisplayView = Backbone.View.extend({
   
   displayTemplate: _.template('<img src=<%=url%> class="display"/><p>Title: <%=title%> </p><p>Rating: <%=rating%> out of 5</p>'),
   
+  initialize: function() {
+    this.render();
+    this.collection.on('toggle:display', this.render, this);
+    this.collection.on('toggle:input', this.render, this);
+  },
+  
   render: function() {
     this.collection.each(function(entry) {
       if (entry.attributes.displayPhoto === true) { 
@@ -13,13 +19,6 @@ var DisplayView = Backbone.View.extend({
       }
     }, this);
     return this;
-  },
-  
-  initialize: function() {
-    this.render();
-    this.collection.on('toggle:display', this.render, this);
-    this.collection.on('toggle:input', this.render, this);
-    
   }
   
 });

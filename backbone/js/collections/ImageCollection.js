@@ -6,5 +6,6 @@ var ImageCollection = Backbone.Collection.extend({
       title: imageTitle,
       url: imageLink
     });
+    this.trigger('toggle:addition');
   }
 });
