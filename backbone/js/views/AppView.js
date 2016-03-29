@@ -9,6 +9,10 @@ var AppView = Backbone.View.extend({
     
     this.header = new HeaderView();
     
+    this.save = new SaveView({
+      collection: this.collection
+    });
+    
     this.display = new DisplayView({
       collection: this.collection
     });
@@ -19,6 +23,7 @@ var AppView = Backbone.View.extend({
   render: function() {
     this.$el.append([
       this.header.$el,
+      this.save.$el,
       this.list.$el,
       this.display.$el,
       // this.input.$el

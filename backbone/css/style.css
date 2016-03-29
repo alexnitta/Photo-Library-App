@@ -48,6 +48,7 @@ table {
 /*END RESET */
 
 #container {
+  font-family: 'Garamond', 'Palatino', 'Didot', serif;
   width: 1000px;
   height: 100%;
   position: absolute;
@@ -71,14 +72,12 @@ table {
 
 h1 {
   font-size: 36pt;
-  font-family: 'Garamond', 'Palatino', 'Didot', serif;
   text-align: center;
   padding-bottom: 36px;
 }
 
 .input {
   line-height: 20px;
-  font-family: 'Garamond', 'Palatino', 'Didot', serif;
   font-size: 12pt;
 }
 
@@ -88,7 +87,6 @@ h1 {
 
 .entry {
   color: black;
-  font-family: 'Garamond', 'Palatino', 'Didot', serif;
   padding-bottom: 16px;
   font-size: 16pt;
 }
@@ -99,8 +97,11 @@ h1 {
 }
 
 .display {
-  font-family: 'Garamond', 'Palatino', 'Didot', serif;
   max-width:600px;
   max-height:100%;
   border: 0px solid black;
+}
+
+.save {
+  text-align: center;
 }
