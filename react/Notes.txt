@@ -1,0 +1,13 @@
+Photo Library App - Component Structure
+
+Photo Library (entire view)
+  - Header (h1: Photo Library App)
+  - Save (Form with URL and Title fields, Save Photo button)
+  - List (table with list of images)
+    - List Header(table header: Images)
+    - List Entry Rows (row for each image title)
+  - Display (div that shows current image)
+    - Viewer (<img> showing current image)
+    - Title (<p> showing current image title)
+    - Rating (<p> showing rating of current image)
+    - Input (form input to set rating of current image)    
