@@ -3,7 +3,9 @@ class Library extends React.Component {
     super(props);
     this.state = {
       currentImage: {},
-      allImages: this.props.imageData
+      allImages: this.props.imageData,
+      addUrl: '',
+      addTitle: ''
     } 
   }
   
@@ -19,12 +21,34 @@ class Library extends React.Component {
     this.setState({currentImage: item});
   }
   
+  saveImage(event) {
+    event.preventDefault();
+    var newImage = {};
+    newImage.rating = 0;
+    newImage.title = this.state.addTitle;
+    newImage.url = this.state.addUrl;
+    var newCollection = this.state.allImages;
+    newCollection.push(newImage);
+    this.setState({
+      allImages: newCollection
+    });
+  }
+  
+  handleUrl(event) {
+    this.setState({addUrl: event.target.value});
+  }
+  
+  handleTitle(event) {
+    this.setState({addTitle: event.target.value});
+  }
+  
   render() {
     
     return (
       <div>
         <LibraryHeader />
-        <LibrarySave />
+        <LibrarySave saveImage={this.saveImage.bind(this)} 
+        handleUrl={this.handleUrl.bind(this)} handleTitle={this.handleTitle.bind(this)} />
         <List entries={this.state.allImages} setImage={this.setImage.bind(this)} />
         <Display entry={this.state.currentImage} setRating={this.setRating.bind(this)} />
       </div>    
