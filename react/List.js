@@ -1,20 +1,20 @@
-class List extends React.Component {
-  constructor(props) {
-    super(props)
+var List = ({entries, setImage}) => {
+  var imageListEntries = entries.map((entry) => {
+    return(
+    <ListEntry entry={entry} setImage={setImage} />  
+    );
   }
-  
-  render() {
-    return (
-      <table className="list">
-      <tbody>
-        <tr>
-        <th className="entry entry-title">Images</th>
-        </tr>
-        <ListEntry />
-      </tbody>  
-      </table>
-   );
-  }
-}
+  ); 
+  return (
+    <table className="list">
+    <tbody>
+      <tr>
+      <th className="entry entry-title">Images</th>
+      </tr>
+      {imageListEntries}
+    </tbody>  
+    </table>
+  );
+};
 
 window.List = List;

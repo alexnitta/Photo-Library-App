@@ -1,17 +1,7 @@
-class ListEntry extends React.Component {
-  
-  constructor(props) {
-    super(props);
-  }
-  
-  render() {
-    return(
-      <tr>
-      <td>List Entry Row</td> 
-      </tr>
-    );
-  }
-  
-}
+var ListEntry = ({entry, setImage}) => (
+    <tr>
+    <td className='entry' onClick={(event) => setImage(entry)}>{entry.title}</td> 
+    </tr>
+);
 
 window.ListEntry = ListEntry;
