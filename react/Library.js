@@ -30,7 +30,9 @@ class Library extends React.Component {
     var newCollection = this.state.allImages;
     newCollection.push(newImage);
     this.setState({
-      allImages: newCollection
+      allImages: newCollection,
+      addUrl: '',
+      addTitle: ''
     });
   }
   
@@ -48,7 +50,8 @@ class Library extends React.Component {
       <div>
         <LibraryHeader />
         <LibrarySave saveImage={this.saveImage.bind(this)} 
-        handleUrl={this.handleUrl.bind(this)} handleTitle={this.handleTitle.bind(this)} />
+        handleUrl={this.handleUrl.bind(this)} handleTitle={this.handleTitle.bind(this)} 
+        addUrl={this.state.addUrl} addTitle={this.state.addTitle} />
         <List entries={this.state.allImages} setImage={this.setImage.bind(this)} />
         <Display entry={this.state.currentImage} setRating={this.setRating.bind(this)} />
       </div>    
