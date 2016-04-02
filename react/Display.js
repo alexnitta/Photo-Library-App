@@ -4,7 +4,7 @@ var Display = ({entry, setRating}) =>
     <p>Title: {entry.title}</p>
     <p>Rating: {entry.rating} out of 5</p>
     <p>Rate this image: 
-    <select className="rating" onChange={(event) => setRating(event)} > 
+    <select className="rating" value="" onChange={(event) => setRating(event)} > 
       <option value=""></option>
       <option value="1">1</option>
       <option value="2">2</option>
